@@ -20,8 +20,8 @@ class SplashPageViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        var testObject = PFObject(className: "TestObject")
-        testObject.saveInBackground()
+        //later, also check for web connectivity and ability to ping parse api
+        
 
     }
 
@@ -31,8 +31,13 @@ class SplashPageViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-        
-        
+    override func viewDidAppear(animated: Bool) {
+        if PFUser.currentUser(){
+            println("Performing segue")
+            performSegueWithIdentifier(SEGUE_SPLASH_TO_MY_BOXII, sender: self)
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

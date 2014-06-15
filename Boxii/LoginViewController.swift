@@ -10,6 +10,9 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+    @IBOutlet var passwordInput : UITextField = nil
+    @IBOutlet var emailInput : UITextField = nil
+    var authenticationModel : AuthenticationModel?
     init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         // Custom initialization
@@ -32,9 +35,22 @@ class LoginViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         var rootNavigationController:UINavigationController = UIApplication.sharedApplication().delegate.window?.rootViewController as UINavigationController
         rootNavigationController.setNavigationBarHidden(false, animated: true)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "loginSuccess:", name: NOTIFICATION_LOGIN_SUCCESS, object: nil)
     }
     
-
+    override func viewWillDisappear(animated: Bool) {
+        NSNotificationCenter.defaultCenter().removeObserver(self)
+    }
+    
+    @IBAction func loginButtonPressed(sender : AnyObject) {
+        self.authenticationModel = AuthenticationModel(email:self.emailInput.text,phoneNumber:nil,password:passwordInput.text)
+        self.authenticationModel!.login()
+        
+    }
+    
+    func loginSuccess(sender:AnyObject!){
+        self.performSegueWithIdentifier(SEGUE_LOGIN_TO_MY_BOXII, sender: self)
+    }
     /*
     // #pragma mark - Navigation
 

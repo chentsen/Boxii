@@ -121,7 +121,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4161" y="952.5"/>
+            <point key="canvasLocation" x="3873" y="897"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="BFr-GT-MHh">
@@ -215,6 +215,7 @@
                     <connections>
                         <segue destination="RjG-zE-Vlx" kind="show" identifier="from_splash_to_signup" id="UKd-fi-PWV"/>
                         <segue destination="0ct-Eh-GV1" kind="show" identifier="from_splash_to_login" id="0uV-Zf-5cO"/>
+                        <segue destination="49e-Tb-3d3" kind="showDetail" identifier="FROM_SPLASH_TO_MY_BOXII" id="pc2-Qj-cgT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l5C-63-iNU" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -233,22 +234,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Email" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tWs-x0-FHe">
-                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="66" y="276" width="188" height="30"/>
-                                </variation>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Password" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YhT-tF-hZF">
-                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="66" y="314" width="188" height="30"/>
-                                </variation>
-                            </textField>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="63M-jS-bbB">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -258,21 +243,6 @@
                                     <rect key="frame" x="15" y="123" width="0.0" height="0.0"/>
                                 </variation>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DTM-T1-0Sq">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <color key="backgroundColor" red="0.1960784314" green="0.48627450979999998" blue="0.79607843140000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Signup">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                </state>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="18"/>
-                                    <rect key="frame" x="66" y="386" width="188" height="44"/>
-                                </variation>
-                                <connections>
-                                    <action selector="signupButtonPressed:" destination="rWH-r5-d1W" eventType="touchUpInside" id="gve-TW-muJ"/>
-                                </connections>
-                            </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="123" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LyY-sW-Adt">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                 <nil key="textColor"/>
@@ -352,15 +322,43 @@
                                     <rect key="frame" x="57" y="86" width="219" height="21"/>
                                 </variation>
                             </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Password" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YhT-tF-hZF">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="66" y="212" width="188" height="30"/>
+                                </variation>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DTM-T1-0Sq">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.1960784314" green="0.48627450979999998" blue="0.79607843140000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Signup">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="18"/>
+                                    <rect key="frame" x="66" y="284" width="188" height="44"/>
+                                </variation>
+                                <connections>
+                                    <action selector="signupButtonPressed:" destination="RjG-zE-Vlx" eventType="touchUpInside" id="rP3-oo-ewT"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Email" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tWs-x0-FHe">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="66" y="181" width="188" height="30"/>
+                                </variation>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="tWs-x0-FHe"/>
-                                <exclude reference="YhT-tF-hZF"/>
                                 <exclude reference="63M-jS-bbB"/>
-                                <exclude reference="DTM-T1-0Sq"/>
                                 <exclude reference="LyY-sW-Adt"/>
                                 <exclude reference="GZ5-yy-O3b"/>
                                 <exclude reference="bKw-kZ-JJY"/>
@@ -369,14 +367,14 @@
                                 <exclude reference="mtv-DC-3iO"/>
                                 <exclude reference="1Pl-fz-M0S"/>
                                 <exclude reference="5bd-Hg-ZdJ"/>
+                                <exclude reference="YhT-tF-hZF"/>
+                                <exclude reference="DTM-T1-0Sq"/>
+                                <exclude reference="tWs-x0-FHe"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
-                                <include reference="tWs-x0-FHe"/>
-                                <include reference="YhT-tF-hZF"/>
                                 <include reference="63M-jS-bbB"/>
-                                <include reference="DTM-T1-0Sq"/>
                                 <include reference="LyY-sW-Adt"/>
                                 <include reference="GZ5-yy-O3b"/>
                                 <include reference="bKw-kZ-JJY"/>
@@ -385,13 +383,84 @@
                                 <include reference="mtv-DC-3iO"/>
                                 <include reference="1Pl-fz-M0S"/>
                                 <include reference="5bd-Hg-ZdJ"/>
+                                <include reference="YhT-tF-hZF"/>
+                                <include reference="DTM-T1-0Sq"/>
+                                <include reference="tWs-x0-FHe"/>
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="areacodeInput" destination="LyY-sW-Adt" id="omt-jY-EQE"/>
+                        <outlet property="emailInput" destination="tWs-x0-FHe" id="NU3-Qq-ks4"/>
+                        <outlet property="passwordInput" destination="YhT-tF-hZF" id="CPW-D8-gud"/>
+                        <outlet property="phoneNumberEndInput" destination="bKw-kZ-JJY" id="Hxb-UR-Ayc"/>
+                        <outlet property="phoneNumberStartInput" destination="GZ5-yy-O3b" id="EeN-X5-eOv"/>
+                        <segue destination="RKM-w0-Ib9" kind="show" identifier="FROM_REGISTRATION_TO_PROFILE_PIC" id="CE8-Bm-tWZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e5v-rV-Xfe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2344.5" y="642"/>
+        </scene>
+        <!--Profile Pic View Controller-->
+        <scene sceneID="nk9-9f-5Bw">
+            <objects>
+                <viewController id="RKM-w0-Ib9" customClass="ProfilePicViewController" customModule="Boxii" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4no-pc-2VN"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZTd-i6-CPw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LW1-QH-pKp">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upload Profile Pic" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ZL-4l-AQl">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="91" y="33" width="138" height="21"/>
+                                </variation>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zyJ-5g-MvY">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.1960784314" green="0.48627450979999998" blue="0.79607843140000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="18"/>
+                                    <rect key="frame" x="76" y="328" width="188" height="44"/>
+                                </variation>
+                                <connections>
+                                    <action selector="nextButtonPressed:" destination="RKM-w0-Ib9" eventType="touchUpInside" id="d4N-8u-Jlk"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="7ZL-4l-AQl"/>
+                                <exclude reference="zyJ-5g-MvY"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="7ZL-4l-AQl"/>
+                                <include reference="zyJ-5g-MvY"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <segue destination="49e-Tb-3d3" kind="showDetail" identifier="FROM_PROFILE_PIC_TO_MY_BOXII" id="NwF-aJ-EUE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rl4-fy-IDr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3085.5" y="642"/>
         </scene>
         <!--Login View Controller - Login-->
         <scene sceneID="akx-RN-SG4">
@@ -433,6 +502,7 @@
                                     <rect key="frame" x="66" y="319" width="188" height="44"/>
                                 </variation>
                                 <connections>
+                                    <action selector="loginButtonPressed:" destination="0ct-Eh-GV1" eventType="touchUpInside" id="GVO-9Y-TiY"/>
                                     <action selector="signupButtonPressed:" destination="rWH-r5-d1W" eventType="touchUpInside" id="bzh-oj-AMN"/>
                                 </connections>
                             </button>
@@ -454,6 +524,11 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="emailInput" destination="rhX-ta-8Vu" id="le6-oV-pCZ"/>
+                        <outlet property="passwordInput" destination="D30-xl-X2K" id="dzl-mx-j98"/>
+                        <segue destination="49e-Tb-3d3" kind="showDetail" identifier="FROM_LOGIN_TO_MY_BOXII" id="Kxa-ZG-Qal"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3kJ-6M-4ks" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -464,4 +539,7 @@
         <image name="first" width="30" height="30"/>
         <image name="second" width="30" height="30"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="pc2-Qj-cgT"/>
+    </inferredMetricsTieBreakers>
 </document>
