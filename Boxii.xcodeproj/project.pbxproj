@@ -14,6 +14,12 @@
 		2C6E2D69194CE87D002FCA3A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C6E2D68194CE87D002FCA3A /* Images.xcassets */; };
 		2C6E2D75194CE87D002FCA3A /* BoxiiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6E2D74194CE87D002FCA3A /* BoxiiTests.swift */; };
 		2C6E2D81194D0B6F002FCA3A /* SplashPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6E2D80194D0B6F002FCA3A /* SplashPageViewController.swift */; };
+		2C6E2D83194D0C8C002FCA3A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6E2D82194D0C8C002FCA3A /* LoginViewController.swift */; };
+		2C6E2D85194D0C93002FCA3A /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6E2D84194D0C93002FCA3A /* RegistrationViewController.swift */; };
+		2C6E2D89194D55B4002FCA3A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6E2D88194D55B4002FCA3A /* Constants.swift */; };
+		2C6E2D8F194D5CBF002FCA3A /* RegistrationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6E2D8E194D5CBF002FCA3A /* RegistrationModel.swift */; };
+		2C6E2D92194D5CDB002FCA3A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6E2D91194D5CDB002FCA3A /* User.swift */; };
+		4109BE490C47479C9CA44322 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 98D59F1D8EDD4B73B34F0F5B /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +44,14 @@
 		2C6E2D73194CE87D002FCA3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2C6E2D74194CE87D002FCA3A /* BoxiiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxiiTests.swift; sourceTree = "<group>"; };
 		2C6E2D80194D0B6F002FCA3A /* SplashPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashPageViewController.swift; sourceTree = "<group>"; };
+		2C6E2D82194D0C8C002FCA3A /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		2C6E2D84194D0C93002FCA3A /* RegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		2C6E2D87194D52AC002FCA3A /* Boxii-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Boxii-Bridging-Header.h"; sourceTree = "<group>"; };
+		2C6E2D88194D55B4002FCA3A /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		2C6E2D8E194D5CBF002FCA3A /* RegistrationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationModel.swift; sourceTree = "<group>"; };
+		2C6E2D91194D5CDB002FCA3A /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		4346E5A6E582462CB7E69F9C /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		98D59F1D8EDD4B73B34F0F5B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4109BE490C47479C9CA44322 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +79,8 @@
 				2C6E2D5C194CE87D002FCA3A /* Boxii */,
 				2C6E2D71194CE87D002FCA3A /* BoxiiTests */,
 				2C6E2D5B194CE87D002FCA3A /* Products */,
+				4346E5A6E582462CB7E69F9C /* Pods.xcconfig */,
+				4D5CD27550274AFD9FDCE233 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -94,7 +111,9 @@
 		2C6E2D5D194CE87D002FCA3A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2C6E2D88194D55B4002FCA3A /* Constants.swift */,
 				2C6E2D5E194CE87D002FCA3A /* Info.plist */,
+				2C6E2D87194D52AC002FCA3A /* Boxii-Bridging-Header.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -120,6 +139,8 @@
 			isa = PBXGroup;
 			children = (
 				2C6E2D80194D0B6F002FCA3A /* SplashPageViewController.swift */,
+				2C6E2D82194D0C8C002FCA3A /* LoginViewController.swift */,
+				2C6E2D84194D0C93002FCA3A /* RegistrationViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -127,8 +148,26 @@
 		2C6E2D7F194D0B0D002FCA3A /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				2C6E2D90194D5CCA002FCA3A /* DataModel */,
+				2C6E2D8E194D5CBF002FCA3A /* RegistrationModel.swift */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		2C6E2D90194D5CCA002FCA3A /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				2C6E2D91194D5CDB002FCA3A /* User.swift */,
+			);
+			name = DataModel;
+			sourceTree = "<group>";
+		};
+		4D5CD27550274AFD9FDCE233 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				98D59F1D8EDD4B73B34F0F5B /* libPods.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +177,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2C6E2D78194CE87D002FCA3A /* Build configuration list for PBXNativeTarget "Boxii" */;
 			buildPhases = (
+				7CCD77E6F0AD41B6BCA1FBE7 /* Check Pods Manifest.lock */,
 				2C6E2D56194CE87D002FCA3A /* Sources */,
 				2C6E2D57194CE87D002FCA3A /* Frameworks */,
 				2C6E2D58194CE87D002FCA3A /* Resources */,
+				C25D901B989649F9810B449B /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -225,15 +266,53 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7CCD77E6F0AD41B6BCA1FBE7 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C25D901B989649F9810B449B /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2C6E2D56194CE87D002FCA3A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C6E2D85194D0C93002FCA3A /* RegistrationViewController.swift in Sources */,
 				2C6E2D81194D0B6F002FCA3A /* SplashPageViewController.swift in Sources */,
 				2C6E2D64194CE87D002FCA3A /* SecondViewController.swift in Sources */,
 				2C6E2D60194CE87D002FCA3A /* AppDelegate.swift in Sources */,
+				2C6E2D89194D55B4002FCA3A /* Constants.swift in Sources */,
+				2C6E2D92194D5CDB002FCA3A /* User.swift in Sources */,
+				2C6E2D83194D0C8C002FCA3A /* LoginViewController.swift in Sources */,
 				2C6E2D62194CE87D002FCA3A /* FirstViewController.swift in Sources */,
+				2C6E2D8F194D5CBF002FCA3A /* RegistrationModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,23 +425,27 @@
 		};
 		2C6E2D79194CE87D002FCA3A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4346E5A6E582462CB7E69F9C /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = Boxii/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Boxii/Boxii-Bridging-Header.h";
 			};
 			name = Debug;
 		};
 		2C6E2D7A194CE87D002FCA3A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4346E5A6E582462CB7E69F9C /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = Boxii/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Boxii/Boxii-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -421,6 +504,7 @@
 				2C6E2D7A194CE87D002FCA3A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2C6E2D7B194CE87D002FCA3A /* Build configuration list for PBXNativeTarget "BoxiiTests" */ = {
 			isa = XCConfigurationList;
@@ -429,6 +513,7 @@
 				2C6E2D7D194CE87D002FCA3A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
