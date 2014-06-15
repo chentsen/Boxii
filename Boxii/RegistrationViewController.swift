@@ -54,7 +54,7 @@ class RegistrationViewController: UIViewController {
 
     
     @IBAction func signupButtonPressed(sender : AnyObject) {
-        println("signup button pressed")
+        SVProgressHUD.show()
         var phoneNumber = "\(areacodeInput.text)\(phoneNumberStartInput.text)\(phoneNumberEndInput.text)"
         self.authenticationModel = AuthenticationModel(email: emailInput.text, phoneNumber: phoneNumber, password: passwordInput.text)
         self.authenticationModel!.register()
@@ -68,6 +68,7 @@ class RegistrationViewController: UIViewController {
     }
 
     func loginSuccess(sender:AnyObject!){
+        SVProgressHUD.dismissHUDAsync()
         self.performSegueWithIdentifier(SEGUE_REGISTRATION_TO_PROFILE, sender: self)
     }
     /*

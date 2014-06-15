@@ -10,6 +10,8 @@ import UIKit
 
 class SplashPageViewController: UIViewController {
 
+    @IBOutlet var loginButton : UIButton = nil
+    @IBOutlet var signupButton : UIButton = nil
     init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         // Custom initialization
@@ -20,7 +22,7 @@ class SplashPageViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        //later, also check for web connectivity and ability to ping parse api
+
         
 
     }
@@ -32,10 +34,15 @@ class SplashPageViewController: UIViewController {
     }
     
     override func viewDidAppear(animated: Bool) {
+        //later, also check for web connectivity and ability to ping parse api
         if PFUser.currentUser(){
-            println("Performing segue")
             performSegueWithIdentifier(SEGUE_SPLASH_TO_MY_BOXII, sender: self)
+        }else{
+            loginButton.hidden = false;
+            signupButton.hidden = false;
         }
+
+//        alertView.show()
     }
     
     override func didReceiveMemoryWarning() {
@@ -44,11 +51,11 @@ class SplashPageViewController: UIViewController {
     }
     
     @IBAction func signupButtonPressed(sender : AnyObject) {
-        performSegueWithIdentifier("from_splash_to_signup", sender:self)
+        performSegueWithIdentifier(SEGUE_SPLASH_TO_SIGNUP, sender:self)
     }
     
     @IBAction func loginButtonPressed(sender : AnyObject) {
-        performSegueWithIdentifier("from_splash_to_login", sender:self)
+        performSegueWithIdentifier(SEGUE_SPLASH_TO_LOGIN, sender:self)
     }
     
 

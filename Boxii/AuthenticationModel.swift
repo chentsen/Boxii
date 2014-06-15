@@ -36,14 +36,13 @@ class AuthenticationModel: NSObject {
             if objects.count == 0{
                 pf_user.signUpInBackgroundWithBlock({(succeeded:Bool!, error:NSError!) in
                     if(!error){
-                        println("User Created!!")
                         NSNotificationCenter.defaultCenter().postNotificationName(NOTIFICATION_REGISTRATION_SUCCESS, object: self)
                     }else{
-                        println("There was an error")
+                        ErrorHandler.addError(nil, message: error.userInfo["error"] as NSString, errorCode: 401)
                     }
                     })
             }else{
-                println("Phone number exists")
+                ErrorHandler.addError("Number exists", message: "This phone number exists already" as NSString, errorCode: 401)
             }
         })
     }
@@ -52,10 +51,11 @@ class AuthenticationModel: NSObject {
             if user{
                 NSNotificationCenter.defaultCenter().postNotificationName(NOTIFICATION_LOGIN_SUCCESS, object: self)
             }else {
-                NSNotificationCenter.defaultCenter().postNotificationName(NOTIFICATION_ERROR, object: self, userInfo: ["error message":"There was an issue logging in, try again later", "code":401])
+                ErrorHandler.addError(nil, message: error.userInfo["error"] as NSString, errorCode: 401)
             }
         })
     }
+    
 }
     
 

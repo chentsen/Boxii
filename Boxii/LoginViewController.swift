@@ -43,12 +43,14 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func loginButtonPressed(sender : AnyObject) {
+        SVProgressHUD.show()
         self.authenticationModel = AuthenticationModel(email:self.emailInput.text,phoneNumber:nil,password:passwordInput.text)
         self.authenticationModel!.login()
         
     }
     
     func loginSuccess(sender:AnyObject!){
+        SVProgressHUD.dismissHUDAsync()
         self.performSegueWithIdentifier(SEGUE_LOGIN_TO_MY_BOXII, sender: self)
     }
     /*

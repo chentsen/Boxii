@@ -162,7 +162,7 @@
                                     <rect key="frame" x="66" y="75" width="188" height="95"/>
                                 </variation>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ATz-JU-xKK">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ATz-JU-xKK">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <color key="backgroundColor" red="0.19607843137254902" green="0.48627450980392156" blue="0.79607843137254897" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -177,7 +177,7 @@
                                     <action selector="signupButtonPressed:" destination="rWH-r5-d1W" eventType="touchUpInside" id="1UY-kT-kkG"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vwG-7I-euR">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vwG-7I-euR">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <color key="backgroundColor" red="0.1960784314" green="0.48627450979999998" blue="0.79607843140000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -213,6 +213,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="RTb-Nn-FV7"/>
                     <connections>
+                        <outlet property="loginButton" destination="vwG-7I-euR" id="IU1-hb-XTl"/>
+                        <outlet property="signupButton" destination="ATz-JU-xKK" id="Ggi-2M-rIW"/>
                         <segue destination="RjG-zE-Vlx" kind="show" identifier="from_splash_to_signup" id="UKd-fi-PWV"/>
                         <segue destination="0ct-Eh-GV1" kind="show" identifier="from_splash_to_login" id="0uV-Zf-5cO"/>
                         <segue destination="49e-Tb-3d3" kind="showDetail" identifier="FROM_SPLASH_TO_MY_BOXII" id="pc2-Qj-cgT"/>
@@ -247,7 +249,7 @@
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                     <rect key="frame" x="46" y="121" width="59" height="30"/>
@@ -257,7 +259,7 @@
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                     <rect key="frame" x="146" y="121" width="59" height="30"/>
@@ -267,7 +269,7 @@
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                     <rect key="frame" x="230" y="121" width="70" height="30"/>
@@ -395,7 +397,7 @@
                         <outlet property="passwordInput" destination="YhT-tF-hZF" id="CPW-D8-gud"/>
                         <outlet property="phoneNumberEndInput" destination="bKw-kZ-JJY" id="Hxb-UR-Ayc"/>
                         <outlet property="phoneNumberStartInput" destination="GZ5-yy-O3b" id="EeN-X5-eOv"/>
-                        <segue destination="RKM-w0-Ib9" kind="show" identifier="FROM_REGISTRATION_TO_PROFILE_PIC" id="CE8-Bm-tWZ"/>
+                        <segue destination="RKM-w0-Ib9" kind="showDetail" identifier="FROM_REGISTRATION_TO_PROFILE_PIC" id="CE8-Bm-tWZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e5v-rV-Xfe" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -540,6 +542,6 @@
         <image name="second" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="pc2-Qj-cgT"/>
+        <segue reference="Kxa-ZG-Qal"/>
     </inferredMetricsTieBreakers>
 </document>
