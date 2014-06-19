@@ -55,6 +55,9 @@ class AuthenticationModel: NSObject {
             }
         })
     }
+    func isValidNumber(){
+        
+    }
     
 }
     

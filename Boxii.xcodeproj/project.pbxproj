@@ -22,6 +22,8 @@
 		2C6E2D89194D55B4002FCA3A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6E2D88194D55B4002FCA3A /* Constants.swift */; };
 		2C6E2D8F194D5CBF002FCA3A /* AuthenticationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6E2D8E194D5CBF002FCA3A /* AuthenticationModel.swift */; };
 		2C6E2D92194D5CDB002FCA3A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6E2D91194D5CDB002FCA3A /* User.swift */; };
+		2C8BC631195137AC001F8C37 /* splash_beach.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 2C8BC630195137AC001F8C37 /* splash_beach.mp4 */; };
+		2CBC7D1819512C8300D748E7 /* splash_flower.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 2CBC7D1719512C8300D748E7 /* splash_flower.mp4 */; };
 		2CE4A25F194E5FEC007C8D83 /* SVProgressHUDExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE4A25E194E5FEC007C8D83 /* SVProgressHUDExtension.swift */; };
 		4109BE490C47479C9CA44322 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 98D59F1D8EDD4B73B34F0F5B /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -57,6 +59,8 @@
 		2C6E2D88194D55B4002FCA3A /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		2C6E2D8E194D5CBF002FCA3A /* AuthenticationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationModel.swift; sourceTree = "<group>"; };
 		2C6E2D91194D5CDB002FCA3A /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		2C8BC630195137AC001F8C37 /* splash_beach.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = splash_beach.mp4; path = ../../../../../Downloads/splash_beach.mp4; sourceTree = "<group>"; };
+		2CBC7D1719512C8300D748E7 /* splash_flower.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = splash_flower.mp4; path = ../../../../../Downloads/splash_flower.mp4; sourceTree = "<group>"; };
 		2CE4A25E194E5FEC007C8D83 /* SVProgressHUDExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SVProgressHUDExtension.swift; sourceTree = "<group>"; };
 		4346E5A6E582462CB7E69F9C /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		98D59F1D8EDD4B73B34F0F5B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -129,6 +133,8 @@
 		2C6E2D5D194CE87D002FCA3A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2C8BC630195137AC001F8C37 /* splash_beach.mp4 */,
+				2CBC7D1719512C8300D748E7 /* splash_flower.mp4 */,
 				2C6E2D88194D55B4002FCA3A /* Constants.swift */,
 				2C6E2D5E194CE87D002FCA3A /* Info.plist */,
 				2C6E2D87194D52AC002FCA3A /* Boxii-Bridging-Header.h */,
@@ -280,8 +286,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C8BC631195137AC001F8C37 /* splash_beach.mp4 in Resources */,
 				2C6E2D67194CE87D002FCA3A /* Main.storyboard in Resources */,
 				2C6E2D69194CE87D002FCA3A /* Images.xcassets in Resources */,
+				2CBC7D1819512C8300D748E7 /* splash_flower.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

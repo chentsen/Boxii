@@ -7,11 +7,16 @@
 //
 
 import UIKit
+import MediaPlayer
 
 class SplashPageViewController: UIViewController {
 
     @IBOutlet var loginButton : UIButton = nil
     @IBOutlet var signupButton : UIButton = nil
+    @IBOutlet var SignupBackground : UIView = nil
+    var movieArray : NSArray?
+    var currentMovieIndex = 0
+    var moviePlayer : MPMoviePlayerController?
     init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         // Custom initialization
@@ -22,15 +27,21 @@ class SplashPageViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
-
+        self.moviePlayer = MPMoviePlayerController()
+        self.moviePlayer!.controlStyle = MPMovieControlStyle.None
+        self.initializeMovieURLs()
     }
 
     override func viewWillAppear(animated: Bool) {
+        
         var rootNavigationViewController = UIApplication.sharedApplication().delegate.window?.rootViewController as UINavigationController
         rootNavigationViewController.setNavigationBarHidden(true, animated: false)
-        // Do any additional setup after loading the view.
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "playNextMovie:", name: MPMoviePlayerPlaybackDidFinishNotification, object: nil)
+        // Do any additional setup after loading the iew.
+    }
+
+    override func viewWillDisappear(animated: Bool) {
+        NSNotificationCenter.defaultCenter().removeObserver(self)
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -41,7 +52,11 @@ class SplashPageViewController: UIViewController {
             loginButton.hidden = false;
             signupButton.hidden = false;
         }
-
+        self.moviePlayer!.view.frame = self.SignupBackground.bounds
+        self.moviePlayer!.scalingMode = MPMovieScalingMode.AspectFill
+        self.SignupBackground.addSubview(self.moviePlayer!.view)
+        playNextMovie(nil)
+        
 //        alertView.show()
     }
     
@@ -58,6 +73,24 @@ class SplashPageViewController: UIViewController {
         performSegueWithIdentifier(SEGUE_SPLASH_TO_LOGIN, sender:self)
     }
     
+    func playNextMovie(notification: NSNotification?){
+        
+        if currentMovieIndex++ > movieArray!.count - 1{
+            currentMovieIndex = 1
+        }
+        println("\(movieArray!.count) and \(currentMovieIndex)")
+        moviePlayer!.contentURL = movieArray![currentMovieIndex-1] as NSURL
+        moviePlayer!.prepareToPlay()
+        moviePlayer!.play()
+        
+    }
+    func initializeMovieURLs(){
+        var beachMoviePath = NSBundle.mainBundle().pathForResource("splash_beach", ofType: "mp4")
+        var flowerMoviePath = NSBundle.mainBundle().pathForResource("splash_flower", ofType: "mp4")
+        var beachMovieURL = NSURL.fileURLWithPath(beachMoviePath)
+        var flowerMovieURL = NSURL.fileURLWithPath(flowerMoviePath)
+        movieArray = [beachMovieURL, flowerMovieURL]
+    }
 
     /*
     // #pragma mark - Navigation

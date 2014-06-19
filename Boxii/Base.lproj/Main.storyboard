@@ -126,11 +126,17 @@
         <!--Navigation Controller-->
         <scene sceneID="BFr-GT-MHh">
             <objects>
-                <navigationController navigationBarHidden="YES" id="CzZ-iI-bgo" sceneMemberID="viewController">
+                <navigationController id="CzZ-iI-bgo" sceneMemberID="viewController">
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="1GN-ms-CoT">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="barTintColor" red="0.96862745100000003" green="0.83921568629999999" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="rWH-r5-d1W" kind="relationship" relationship="rootViewController" id="0Qe-Kc-h6X"/>
@@ -152,9 +158,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0nh-BT-61k">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" red="0.047991071429999997" green="0.047991071429999997" blue="0.047991071429999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="652"/>
+                                </variation>
+                            </view>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Boxii" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7tk-aP-ORc">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
@@ -162,7 +175,7 @@
                                     <rect key="frame" x="66" y="75" width="188" height="95"/>
                                 </variation>
                             </label>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ATz-JU-xKK">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ATz-JU-xKK">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <color key="backgroundColor" red="0.19607843137254902" green="0.48627450980392156" blue="0.79607843137254897" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -171,13 +184,13 @@
                                 </state>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="18"/>
-                                    <rect key="frame" x="66" y="268" width="188" height="44"/>
+                                    <rect key="frame" x="66" y="400" width="188" height="44"/>
                                 </variation>
                                 <connections>
                                     <action selector="signupButtonPressed:" destination="rWH-r5-d1W" eventType="touchUpInside" id="1UY-kT-kkG"/>
                                 </connections>
                             </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vwG-7I-euR">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vwG-7I-euR">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <color key="backgroundColor" red="0.1960784314" green="0.48627450979999998" blue="0.79607843140000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -186,7 +199,7 @@
                                 </state>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="18"/>
-                                    <rect key="frame" x="66" y="337" width="188" height="44"/>
+                                    <rect key="frame" x="66" y="460" width="188" height="44"/>
                                 </variation>
                                 <connections>
                                     <action selector="loginButtonPressed:" destination="rWH-r5-d1W" eventType="touchUpInside" id="itT-o5-KZ5"/>
@@ -198,6 +211,7 @@
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                         <variation key="default">
                             <mask key="subviews">
+                                <exclude reference="0nh-BT-61k"/>
                                 <exclude reference="7tk-aP-ORc"/>
                                 <exclude reference="ATz-JU-xKK"/>
                                 <exclude reference="vwG-7I-euR"/>
@@ -205,6 +219,7 @@
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
+                                <include reference="0nh-BT-61k"/>
                                 <include reference="7tk-aP-ORc"/>
                                 <include reference="ATz-JU-xKK"/>
                                 <include reference="vwG-7I-euR"/>
@@ -213,6 +228,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="RTb-Nn-FV7"/>
                     <connections>
+                        <outlet property="SignupBackground" destination="0nh-BT-61k" id="q02-sZ-eTh"/>
                         <outlet property="loginButton" destination="vwG-7I-euR" id="IU1-hb-XTl"/>
                         <outlet property="signupButton" destination="ATz-JU-xKK" id="Ggi-2M-rIW"/>
                         <segue destination="RjG-zE-Vlx" kind="show" identifier="from_splash_to_signup" id="UKd-fi-PWV"/>
@@ -229,110 +245,50 @@
             <objects>
                 <viewController title="Signup" id="RjG-zE-Vlx" customClass="RegistrationViewController" customModule="Boxii" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="N6A-Vd-g9V"/>
-                        <viewControllerLayoutGuide type="bottom" id="HnH-aD-TSq"/>
+                        <viewControllerLayoutGuide type="top" id="7Ck-V2-rYS"/>
+                        <viewControllerLayoutGuide type="bottom" id="GI6-4s-JQm"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="LAM-wn-21f">
+                    <scrollView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" id="jwf-Y8-aJm">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="63M-jS-bbB">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sC9-2x-sqI">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="15" y="123" width="0.0" height="0.0"/>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                    <rect key="frame" x="44" y="113" width="42" height="36"/>
                                 </variation>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="123" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LyY-sW-Adt">
-                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                    <rect key="frame" x="46" y="121" width="59" height="30"/>
-                                </variation>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="123" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GZ5-yy-O3b">
-                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                    <rect key="frame" x="146" y="121" width="59" height="30"/>
-                                </variation>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1234" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bKw-kZ-JJY">
-                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                    <rect key="frame" x="230" y="121" width="70" height="30"/>
-                                </variation>
-                            </textField>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=") -" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Oa-9c-7GL">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="30"/>
-                                    <rect key="frame" x="105" y="115" width="42" height="36"/>
-                                </variation>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ojt-fX-5hL">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="30"/>
-                                    <rect key="frame" x="15" y="115" width="42" height="36"/>
-                                </variation>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mtv-DC-3iO">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="30"/>
-                                    <rect key="frame" x="196" y="122" width="42" height="21"/>
-                                </variation>
-                            </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="*Boxii will NEVER share your number with  anyone else. We use it to identify your contacts" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Pl-fz-M0S">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="*Boxii will NEVER share your number with  anyone else." textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QWA-DI-2wc">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="12"/>
-                                    <rect key="frame" x="46" y="159" width="240" height="114"/>
+                                    <rect key="frame" x="49" y="157" width="241" height="59"/>
                                 </variation>
                             </textView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Phone Number, Please!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5bd-Hg-ZdJ">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Phone Number, Please!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TVg-TB-I2f">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="57" y="86" width="219" height="21"/>
+                                    <rect key="frame" x="60" y="84" width="219" height="21"/>
                                 </variation>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Password" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YhT-tF-hZF">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Email" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qdu-f9-Nu2">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="66" y="212" width="188" height="30"/>
+                                    <rect key="frame" x="66" y="367" width="188" height="30"/>
                                 </variation>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DTM-T1-0Sq">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="15a-lK-nz9">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <color key="backgroundColor" red="0.1960784314" green="0.48627450979999998" blue="0.79607843140000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -341,62 +297,65 @@
                                 </state>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="18"/>
-                                    <rect key="frame" x="66" y="284" width="188" height="44"/>
+                                    <rect key="frame" x="66" y="470" width="188" height="44"/>
                                 </variation>
                                 <connections>
-                                    <action selector="signupButtonPressed:" destination="RjG-zE-Vlx" eventType="touchUpInside" id="rP3-oo-ewT"/>
+                                    <action selector="signupButtonPressed:" destination="RjG-zE-Vlx" eventType="touchUpInside" id="mpq-dY-d9s"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Email" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tWs-x0-FHe">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Password" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bvu-RP-trr">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="66" y="181" width="188" height="30"/>
+                                    <rect key="frame" x="66" y="405" width="188" height="30"/>
+                                </variation>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="123" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hso-Js-XA6">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
+                                    <rect key="frame" x="82" y="116" width="188" height="30"/>
                                 </variation>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="63M-jS-bbB"/>
-                                <exclude reference="LyY-sW-Adt"/>
-                                <exclude reference="GZ5-yy-O3b"/>
-                                <exclude reference="bKw-kZ-JJY"/>
-                                <exclude reference="8Oa-9c-7GL"/>
-                                <exclude reference="ojt-fX-5hL"/>
-                                <exclude reference="mtv-DC-3iO"/>
-                                <exclude reference="1Pl-fz-M0S"/>
-                                <exclude reference="5bd-Hg-ZdJ"/>
-                                <exclude reference="YhT-tF-hZF"/>
-                                <exclude reference="DTM-T1-0Sq"/>
-                                <exclude reference="tWs-x0-FHe"/>
+                                <exclude reference="sC9-2x-sqI"/>
+                                <exclude reference="QWA-DI-2wc"/>
+                                <exclude reference="TVg-TB-I2f"/>
+                                <exclude reference="qdu-f9-Nu2"/>
+                                <exclude reference="15a-lK-nz9"/>
+                                <exclude reference="bvu-RP-trr"/>
+                                <exclude reference="Hso-Js-XA6"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
-                                <include reference="63M-jS-bbB"/>
-                                <include reference="LyY-sW-Adt"/>
-                                <include reference="GZ5-yy-O3b"/>
-                                <include reference="bKw-kZ-JJY"/>
-                                <include reference="8Oa-9c-7GL"/>
-                                <include reference="ojt-fX-5hL"/>
-                                <include reference="mtv-DC-3iO"/>
-                                <include reference="1Pl-fz-M0S"/>
-                                <include reference="5bd-Hg-ZdJ"/>
-                                <include reference="YhT-tF-hZF"/>
-                                <include reference="DTM-T1-0Sq"/>
-                                <include reference="tWs-x0-FHe"/>
+                                <include reference="sC9-2x-sqI"/>
+                                <include reference="QWA-DI-2wc"/>
+                                <include reference="TVg-TB-I2f"/>
+                                <include reference="qdu-f9-Nu2"/>
+                                <include reference="15a-lK-nz9"/>
+                                <include reference="bvu-RP-trr"/>
+                                <include reference="Hso-Js-XA6"/>
                             </mask>
                         </variation>
-                    </view>
+                        <variation key="heightClass=regular-widthClass=compact" ambiguous="YES">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="640"/>
+                        </variation>
+                    </scrollView>
                     <connections>
-                        <outlet property="areacodeInput" destination="LyY-sW-Adt" id="omt-jY-EQE"/>
-                        <outlet property="emailInput" destination="tWs-x0-FHe" id="NU3-Qq-ks4"/>
-                        <outlet property="passwordInput" destination="YhT-tF-hZF" id="CPW-D8-gud"/>
-                        <outlet property="phoneNumberEndInput" destination="bKw-kZ-JJY" id="Hxb-UR-Ayc"/>
-                        <outlet property="phoneNumberStartInput" destination="GZ5-yy-O3b" id="EeN-X5-eOv"/>
+                        <outlet property="emailInput" destination="qdu-f9-Nu2" id="KQa-E5-Vp3"/>
+                        <outlet property="passwordInput" destination="bvu-RP-trr" id="cQy-nq-9O3"/>
+                        <outlet property="phoneNumberInput" destination="Hso-Js-XA6" id="ZrC-RH-f6g"/>
+                        <outlet property="scrollView" destination="jwf-Y8-aJm" id="LVj-Pe-kjk"/>
                         <segue destination="RKM-w0-Ib9" kind="showDetail" identifier="FROM_REGISTRATION_TO_PROFILE_PIC" id="CE8-Bm-tWZ"/>
                     </connections>
                 </viewController>
@@ -484,14 +443,6 @@
                                     <rect key="frame" x="66" y="209" width="188" height="30"/>
                                 </variation>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Password" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="D30-xl-X2K">
-                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="66" y="247" width="188" height="30"/>
-                                </variation>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZO2-an-QUo">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <color key="backgroundColor" red="0.1960784314" green="0.48627450979999998" blue="0.79607843140000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -508,21 +459,29 @@
                                     <action selector="signupButtonPressed:" destination="rWH-r5-d1W" eventType="touchUpInside" id="bzh-oj-AMN"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Password" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="D30-xl-X2K">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="66" y="247" width="188" height="30"/>
+                                </variation>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="rhX-ta-8Vu"/>
-                                <exclude reference="D30-xl-X2K"/>
                                 <exclude reference="ZO2-an-QUo"/>
+                                <exclude reference="D30-xl-X2K"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
                                 <include reference="rhX-ta-8Vu"/>
-                                <include reference="D30-xl-X2K"/>
                                 <include reference="ZO2-an-QUo"/>
+                                <include reference="D30-xl-X2K"/>
                             </mask>
                         </variation>
                     </view>
